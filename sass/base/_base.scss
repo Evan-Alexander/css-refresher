@@ -1,0 +1,43 @@
+/* Root font size is determined in the HTML
+Setting root font size to 10px just makes calulations easier
+*/
+
+ /* 
+ REM - always based on root font size
+ EM - Sized based relative to parent element  
+ */
+
+ /* 
+ ACCESSABILITY FONT-SIZE SETTING BEST PRACTICES 
+ - sometimes a user will set their default browser font size to
+ something else besides 16px.  By setting our root HTML font-size
+ to 62.5%, we wont be overriding their decision to change their font 
+ size.  This is way more flexible and allows for better accessiblity.
+ We want our root to be 10px.  
+ Default is 16px.
+ If we divide 16 by 10 we get 62.5%.  By establishing our root setting to 
+ 62.5% will allow users to set their default font sizes while maintaining 
+ the original look and feel of the website or app.
+ 10/16 = 62.5%
+ */
+
+/* RESETTING STYLES MANUALLY */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* 
+  box-sizing is not an inherited propery 
+  so we declare it in the body and then make it an inherited property here.
+  */
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
