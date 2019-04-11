@@ -1,0 +1,7 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  // padding and margin to prevent a white spage gap between
+  // the diagonal (clip-path) and the about secion
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
