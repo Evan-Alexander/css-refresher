@@ -1,0 +1,20 @@
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15;
+  overflow: hidden;
+
+  &__content {
+    // constrain video to fit within the section div
+    height: 100%;
+    width: 100%;
+    // because the video is wider than it is higher, object-fit will 
+    // trim off the top and the bottom of the video to cover the whole div
+    // while maintaining the aspect ratio of the video
+    object-fit: cover;
+  }
+}
